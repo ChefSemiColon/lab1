@@ -24,6 +24,8 @@ int p2score;
 CircleShape ball;
 RectangleShape paddles[2];
 
+bool ai = false;
+
 void Reset() {
 	server = !server;
 	//reset paddle position
@@ -40,7 +42,7 @@ void Reset() {
 
 void Load() {
 
-	font.loadFromFile("C:/Users/Zach/OneDrive/Documents/GitHub/lab1/res/RobotoMono-Regular.ttf");
+	font.loadFromFile("res/RobotoMono-Regular.ttf");
 	text.setFont(font);
 	text.setCharacterSize(24);
 
@@ -103,9 +105,34 @@ void Update(RenderWindow& window) {
 		ball.move(-10, 0);
 	}
 
+	float direction2p = 0.0f;
+
+	if (ai) {
+		if (by < paddles[1].getPosition().y && !(paddles[1].getPosition().y - (paddleSize.y * .5f) < 0)) {
+			direction2p--;
+
+		}
+		else if (by > paddles[1].getPosition().y && !(paddles[1].getPosition().y + (paddleSize.y * .5f) > gameHeight)) {
+			direction2p++;
+
+		}
+		else {
+			//do nothing
+		}
 
 
 
+	}
+	else {
+	if (Keyboard::isKeyPressed(controls[2]) && !(paddles[1].getPosition().y - (paddleSize.y * .5f) < 0)) {
+		direction2p--;
+	}
+	if (Keyboard::isKeyPressed(controls[3]) && !(paddles[1].getPosition().y + (paddleSize.y * .5f) > gameHeight)) {
+		direction2p++;
+	}
+	
+	}
+paddles[1].move(0, direction2p * paddleSpeed * dt);
 
 
 
@@ -115,21 +142,15 @@ void Update(RenderWindow& window) {
 		window.close();
 	}
 	float direction = 0.0f;
-	if (Keyboard::isKeyPressed(controls[0])) {
+	if (Keyboard::isKeyPressed(controls[0]) && !(paddles[0].getPosition().y - (paddleSize.y * .5f) < 0)) {
 		direction--;
 	}
-	if (Keyboard::isKeyPressed(controls[1])) {
+	if (Keyboard::isKeyPressed(controls[1]) && !(paddles[0].getPosition().y + (paddleSize.y * .5f) > gameHeight)) {
 		direction++;
 	}	
-	float direction2p = 0.0f;
-	if (Keyboard::isKeyPressed(controls[2])) {
-		direction2p--;
-	}
-	if (Keyboard::isKeyPressed(controls[3])) {
-		direction2p++;
-	}
+
 	paddles[0].move(0, direction * paddleSpeed * dt);
-	paddles[1].move(0, direction2p * paddleSpeed * dt);
+
 	ball.move(ballVelocity * dt);
 }
 
