@@ -1,0 +1,33 @@
+﻿  Clipboard.cpp
+  Context.cpp
+  Cursor.cpp
+  EGLCheck.cpp
+  EglContext.cpp
+  GlContext.cpp
+  GlResource.cpp
+  Joystick.cpp
+  JoystickManager.cpp
+  Keyboard.cpp
+  Mouse.cpp
+  Sensor.cpp
+  SensorManager.cpp
+  Touch.cpp
+  VideoMode.cpp
+  Vulkan.cpp
+  ClipboardImpl.cpp
+  CursorImpl.cpp
+  InputImpl.cpp
+  JoystickImpl.cpp
+  Generating Code...
+  Compiling...
+  SensorImpl.cpp
+  VideoModeImpl.cpp
+  VulkanImplWin32.cpp
+  WglContext.cpp
+  WindowImplWin32.cpp
+  Window.cpp
+  WindowBase.cpp
+  WindowImpl.cpp
+  Generating Code...
+     Creating library C:/Users/Zach/OneDrive/Documents/GitHub/lab1/2_invadersBuild/lib/sfml/lib/Debug/sfml-window-d.lib and object C:/Users/Zach/OneDrive/Documents/GitHub/lab1/2_invadersBuild/lib/sfml/lib/Debug/sfml-window-d.exp
+  sfml-window.vcxproj -> C:\Users\Zach\OneDrive\Documents\GitHub\lab1\2_invadersBuild\bin\Debug\sfml-window-d-2.dll
