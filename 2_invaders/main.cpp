@@ -56,6 +56,14 @@ void Update(RenderWindow& window) {
 	if (Keyboard::isKeyPressed(Keyboard::Escape)) {
 		window.close();
 	}
+
+	float direction = 0.0f;
+	if (Keyboard::isKeyPressed(controls[0])){
+		direction--;
+	}
+	if (Keyboard::isKeyPressed(controls[1])){
+		direction++;
+	}
 	for (auto& s : ships) {
 		s->Update(dt);
 	};
