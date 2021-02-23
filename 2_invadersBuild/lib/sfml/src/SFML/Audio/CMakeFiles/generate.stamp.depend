@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib/sfml/cmake/Modules/FindFLAC.cmake
+C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib/sfml/cmake/Modules/FindVORBIS.cmake
+C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib/sfml/src/SFML/Audio/CMakeLists.txt
+D:/cmake/cmake-3.19.3-win64-x64/share/cmake-3.19/Modules/FindOpenAL.cmake
+D:/cmake/cmake-3.19.3-win64-x64/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake
+D:/cmake/cmake-3.19.3-win64-x64/share/cmake-3.19/Modules/FindPackageMessage.cmake

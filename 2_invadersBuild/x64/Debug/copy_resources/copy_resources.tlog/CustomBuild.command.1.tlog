@@ -1,0 +1,20 @@
+^C:\USERS\ZACH\ONEDRIVE\DOCUMENTS\GITHUB\LAB1\2_INVADERSBUILD\CMAKEFILES\DECD088C1F6AEA174C1771DA6B21C833\COPY_RESOURCES.RULE
+setlocal
+D:\cmake\cmake-3.19.3-win64-x64\bin\cmake.exe -E copy_directory C:/Users/Zach/OneDrive/Documents/GitHub/lab1/res C:/Users/Zach/OneDrive/Documents/GitHub/lab1/2_invadersBuild/bin//Debug/res
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ZACH\ONEDRIVE\DOCUMENTS\GITHUB\LAB1\CMAKELISTS.TXT
+setlocal
+D:\cmake\cmake-3.19.3-win64-x64\bin\cmake.exe -SC:/Users/Zach/OneDrive/Documents/GitHub/lab1 -BC:/Users/Zach/OneDrive/Documents/GitHub/lab1/2_invadersBuild --check-stamp-file C:/Users/Zach/OneDrive/Documents/GitHub/lab1/2_invadersBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
