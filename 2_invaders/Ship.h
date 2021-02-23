@@ -5,6 +5,7 @@
 class Ship : public sf::Sprite {
 protected:
     sf::IntRect _sprite;
+    bool _exploded = false;
     //Default constructor is hidden
     Ship();
 public:
@@ -12,8 +13,12 @@ public:
     explicit Ship(sf::IntRect ir);
     //Pure virtual deconstructor -- makes this an abstract class and avoids undefined behaviour!
     virtual ~Ship() = 0;
+    bool is_exploded() const;
+    virtual void Explode();
     //Update, virtual so can be overridden, but not pure virtual
     virtual void Update(const float& dt);
+    bool is_player;
+    float explosionTimer=0.5f;
 };
 
 

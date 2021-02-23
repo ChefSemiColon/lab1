@@ -322,6 +322,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\2_invaders\Ship.h" />
+    <ClCompile Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\2_invaders\bullet.cpp" />
+    <ClInclude Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\2_invaders\bullet.h" />
     <ClInclude Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\2_invaders\game.h" />
     <ClCompile Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\2_invaders\invader.cpp" />
     <ClInclude Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\2_invaders\invader.h" />

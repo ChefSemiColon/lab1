@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "ship.h"
 #include "game.h"
+#include "bullet.h"
 #include <iostream>
 using namespace sf;
 using namespace std;
@@ -12,7 +13,7 @@ const Keyboard::Key controls[2] = {
 };
 
 vector<Ship*> ships;
-
+Player* player;
 Texture spritesheet;
 Sprite invader;
 
@@ -30,7 +31,8 @@ void Load() {
 			ships.push_back(inv);
 		}
 	}
-
+	Player* inv = new Player();
+	ships.push_back(inv);
 }
 
 
@@ -57,16 +59,12 @@ void Update(RenderWindow& window) {
 		window.close();
 	}
 
-	float direction = 0.0f;
-	if (Keyboard::isKeyPressed(controls[0])){
-		direction--;
-	}
-	if (Keyboard::isKeyPressed(controls[1])){
-		direction++;
-	}
+
 	for (auto& s : ships) {
 		s->Update(dt);
 	};
+	Bullet::Update(dt);
+
 }
 
 void Render(RenderWindow& window) {
@@ -75,6 +73,7 @@ void Render(RenderWindow& window) {
 	for (const auto s : ships) {
 		window.draw(*s);
 	}
+	Bullet::Render(window);
 }
 
 
