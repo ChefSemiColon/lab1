@@ -1,0 +1,11 @@
+﻿  ClipboardImpl.cpp
+  InputImpl.cpp
+  JoystickImpl.cpp
+  SensorImpl.cpp
+  VideoModeImpl.cpp
+  VulkanImplWin32.cpp
+  WglContext.cpp
+  WindowImplWin32.cpp
+  Generating Code...
+     Creating library C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/lib/sfml/lib/Debug/sfml-window-d.lib and object C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/lib/sfml/lib/Debug/sfml-window-d.exp
+  sfml-window.vcxproj -> C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\bin\Debug\sfml-window-d-2.dll

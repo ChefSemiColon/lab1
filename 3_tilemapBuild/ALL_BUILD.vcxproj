@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A8044A59-5933-3CA7-9916-7DE79B15D3A8}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Zach/OneDrive/Documents/GitHub/lab1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\cmake\cmake-3.19.3-win64-x64\bin\cmake.exe -SC:/Users/Zach/OneDrive/Documents/GitHub/lab1 -BC:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild --check-stamp-file C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCXXCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeRCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Zach/OneDrive/Documents/GitHub/lab1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\cmake\cmake-3.19.3-win64-x64\bin\cmake.exe -SC:/Users/Zach/OneDrive/Documents/GitHub/lab1 -BC:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild --check-stamp-file C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCXXCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeRCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Zach/OneDrive/Documents/GitHub/lab1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\cmake\cmake-3.19.3-win64-x64\bin\cmake.exe -SC:/Users/Zach/OneDrive/Documents/GitHub/lab1 -BC:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild --check-stamp-file C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCXXCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeRCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Zach/OneDrive/Documents/GitHub/lab1/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\cmake\cmake-3.19.3-win64-x64\bin\cmake.exe -SC:/Users/Zach/OneDrive/Documents/GitHub/lab1 -BC:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild --check-stamp-file C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeCXXCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeRCCompiler.cmake;C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\3.19.3\CMakeSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeRCInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\Windows.cmake;D:\cmake\cmake-3.19.3-win64-x64\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\ZERO_CHECK.vcxproj">
+      <Project>{E8C585EC-51AC-32F2-9FD0-348DEC1B9FFF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\2_INVADERS.vcxproj">
+      <Project>{C1A091D0-EB19-37C3-BC6D-485591C35DE8}</Project>
+      <Name>2_INVADERS</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\3_TILEMAP.vcxproj">
+      <Project>{99F38236-1742-3654-8161-1E8DFED7DF59}</Project>
+      <Name>3_TILEMAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\PRACTICAL_1.vcxproj">
+      <Project>{9DB4956C-E236-30EF-8C89-31C926B7D653}</Project>
+      <Name>PRACTICAL_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\lib_tile_level_loader.vcxproj">
+      <Project>{598F72FA-377E-3AC9-BB46-5CE303FF8804}</Project>
+      <Name>lib_tile_level_loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\lib\sfml\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{80A1F08D-EEA7-3CBD-B099-575CF0E47BB5}</Project>
+      <Name>sfml-audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\lib\sfml\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{429D0849-FFC2-3B5D-84A9-894BA01072AD}</Project>
+      <Name>sfml-graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\lib\sfml\src\SFML\Main\sfml-main.vcxproj">
+      <Project>{9F8FA23E-6803-36A6-ADDD-99E245A1DCBE}</Project>
+      <Name>sfml-main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\lib\sfml\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{33AF71E9-39AF-3FC4-9602-2F8D8162F376}</Project>
+      <Name>sfml-network</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\lib\sfml\src\SFML\System\sfml-system.vcxproj">
+      <Project>{66E81731-3F83-3954-B9E8-9E376A9A24CB}</Project>
+      <Name>sfml-system</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\lib\sfml\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{4A34CC75-5E52-3C41-BD7C-E026355F8396}</Project>
+      <Name>sfml-window</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
