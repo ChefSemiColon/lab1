@@ -1,0 +1,22 @@
+﻿  LevelSystem.cpp
+C:\Users\Zach\OneDrive\Documents\GitHub\lab1\lib_tile_level_loader\LevelSystem.cpp(88,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Zach\OneDrive\Documents\GitHub\lab1\lib_tile_level_loader\LevelSystem.cpp(89,16): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Zach\OneDrive\Documents\GitHub\lab1\lib_tile_level_loader\LevelSystem.cpp(109,28): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=size_t
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Zach\OneDrive\Documents\GitHub\lab1\lib_tile_level_loader\LevelSystem.cpp(109,23): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=size_t
+          ]
+          and
+          [
+              T=float
+          ]
+  lib_tile_level_loader.vcxproj -> C:\Users\Zach\OneDrive\Documents\GitHub\lab1\3_tilemapBuild\Debug\lib_tile_level_loader.lib

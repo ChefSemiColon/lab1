@@ -7,7 +7,6 @@
 #include <string>
 #include <vector>
 #include "C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib_maths/maths.h"
-#define ls LevelSystem
 
 class LevelSystem {
 public:
@@ -24,13 +23,13 @@ public:
     //get the tile at screenspace pos
     static TILE getTileAt(sf::Vector2f);
 
-    static size_t getHeight();
-    static size_t getWidth();
+    static int getHeight();
+    static int getWidth();
 
 protected:
     static std::unique_ptr<TILE[]> _tiles; //Internal array of tiles
-    static size_t _width; //how many tiles wide is level
-    static size_t _height; //how many tile high is level
+    static int _width; //how many tiles wide is level
+    static int _height; //how many tile high is level
     static sf::Vector2f _offset; //Screenspace offset of level, when rendered.
     static float _tileSize; //Screenspace size of each tile, when rendered.
     static std::map<TILE, sf::Color> _colours; //color to render each tile type

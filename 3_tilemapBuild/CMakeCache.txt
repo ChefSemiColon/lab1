@@ -339,7 +339,7 @@ VORBIS_INCLUDE_DIR:PATH=C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib/sfml/ex
 VORBIS_LIBRARY:FILEPATH=C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib/sfml/extlibs/libs-msvc-universal/x64/vorbis.lib
 
 //Dependencies for the target
-lib_tile_level_loader_LIB_DEPENDS:STATIC=general;lib_maths;general;sfml-graphics;
+lib_tile_level_loader_LIB_DEPENDS:STATIC=general;sfml-graphics;
 
 //Dependencies for the target
 sfml-audio_LIB_DEPENDS:STATIC=general;sfml-system;

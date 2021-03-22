@@ -9,9 +9,6 @@
     <ClInclude Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\lib_tile_level_loader\LevelSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\lib_maths\maths.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Zach\OneDrive\Documents\GitHub\lab1\CMakeLists.txt" />

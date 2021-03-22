@@ -1,10 +1,33 @@
-﻿  ClipboardImpl.cpp
+﻿  Building Custom Rule C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib/sfml/src/SFML/Window/CMakeLists.txt
+  Clipboard.cpp
+  Context.cpp
+  Cursor.cpp
+  EGLCheck.cpp
+  EglContext.cpp
+  GlContext.cpp
+  GlResource.cpp
+  Joystick.cpp
+  JoystickManager.cpp
+  Keyboard.cpp
+  Mouse.cpp
+  Touch.cpp
+  Sensor.cpp
+  SensorManager.cpp
+  VideoMode.cpp
+  Vulkan.cpp
+  Window.cpp
+  WindowBase.cpp
+  WindowImpl.cpp
+  CursorImpl.cpp
+  Generating Code...
+  Compiling...
+  ClipboardImpl.cpp
+  WglContext.cpp
   InputImpl.cpp
   JoystickImpl.cpp
   SensorImpl.cpp
   VideoModeImpl.cpp
   VulkanImplWin32.cpp
-  WglContext.cpp
   WindowImplWin32.cpp
   Generating Code...
      Creating library C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/lib/sfml/lib/Debug/sfml-window-d.lib and object C:/Users/Zach/OneDrive/Documents/GitHub/lab1/3_tilemapBuild/lib/sfml/lib/Debug/sfml-window-d.exp

@@ -1,23 +1,29 @@
 //player.cpp
 #include "player.h"
+#include "LevelSystem.h"
+#define ls LevelSystem
 using namespace sf;
 using namespace std;
+
+bool validmove(Vector2f pos) {
+    return (ls::getTileAt(pos) != ls::WALL);
+}
 
 void Player::Update(float dt) {
     //Move in four directions based on keys
     float directionX = 0.0f;
     float directionY = 0.0f;
 
-    if (Keyboard::isKeyPressed(Keyboard::Left)) {
+    if (Keyboard::isKeyPressed(Keyboard::Left) && validmove(getPosition())) {
         directionX--;
     }
-    if (Keyboard::isKeyPressed(Keyboard::Right)) {
+    if (Keyboard::isKeyPressed(Keyboard::Right)&& validmove(getPosition())) {
         directionX++;
     }    
-    if (Keyboard::isKeyPressed(Keyboard::Up)) {
+    if (Keyboard::isKeyPressed(Keyboard::Up) && validmove(getPosition())) {
         directionY--;
     }
-    if (Keyboard::isKeyPressed(Keyboard::Down)) {
+    if (Keyboard::isKeyPressed(Keyboard::Down) && validmove(getPosition())) {
         directionY++;
     }
     move({ directionX * _speed*dt, directionY * _speed*dt });

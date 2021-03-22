@@ -2,7 +2,9 @@
 #include "game.h"
 #include <iostream>
 #include "Player.h"
-#include "../lib_tile_level_loader/LevelSystem.h"
+#include "C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib_tile_level_loader/LevelSystem.h"
+#define ls LevelSystem
+
 using namespace sf;
 using namespace std;
 
@@ -22,15 +24,15 @@ void Load() {
 	//	cerr << "Failed to load spritesheet!" << std::endl;
 	//}
 	player = make_unique<Player>();
-	//ls::loadLevelFile("C:/Users/Zach/OneDrive/Documents/GitHub/lab1/res/maze_2.txt");
+	ls::loadLevelFile("C:/Users/Zach/OneDrive/Documents/GitHub/lab1/res/maze_2.txt");
 
-	//// Print the level to the console
-	//for (size_t y = 0; y < ls::getHeight(); ++y) {
-	//	for (size_t x = 0; x < ls::getWidth(); ++x) {
-	//		cout << ls::getTile({ x, y });
-	//	}
-	//	cout << endl;
-	//}
+	// Print the level to the console
+	for (size_t y = 0; y < ls::getHeight(); ++y) {
+		for (size_t x = 0; x < ls::getWidth(); ++x) {
+			cout << ls::getTile({ x, y });
+		}
+		cout << endl;
+	}
 }
 
 
@@ -64,7 +66,7 @@ void Render(RenderWindow& window) {
 	//Draw Everything
 	//window.draw(invader);
 	player->Render(window);
-	//ls::Render(window);
+	ls::Render(window);
 }
 
 

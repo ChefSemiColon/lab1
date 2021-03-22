@@ -6,8 +6,8 @@ using namespace std;
 using namespace sf;
 
 std::unique_ptr<LevelSystem::TILE[]> LevelSystem::_tiles;
-size_t LevelSystem::_width;
-size_t LevelSystem::_height;
+int LevelSystem::_width;
+int LevelSystem::_height;
 Vector2f LevelSystem::_offset(0.0f, 0.0f);
 
 float LevelSystem::_tileSize(100.f);
@@ -124,12 +124,12 @@ LevelSystem::TILE LevelSystem::getTileAt(Vector2f v) {
     return getTile(Vector2ul((v - _offset) / (_tileSize)));
 }
 
-size_t LevelSystem::getHeight()
+int LevelSystem::getHeight()
 {
     return _height;
 }
 
-size_t LevelSystem::getWidth()
+int LevelSystem::getWidth()
 {
     return _width;
 }
