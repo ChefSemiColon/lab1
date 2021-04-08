@@ -33,6 +33,12 @@ add_library(lib_ecm STATIC ${SOURCE_FILES})
 target_include_directories(lib_ecm INTERFACE "${CMAKE_SOURCE_DIR}/lib_ecm" )
 target_link_libraries(lib_ecm PRIVATE lib_maths)
 
+# B2D - Box2D phyics library
+add_subdirectory("lib/b2d/Box2D")
+#include_directories("lib/b2d/Box2D/")
+set(B2D_INCS "lib/b2d/Box2D/")
+link_directories("${CMAKE_BINARY_DIR}/lib/sfml/lib")
+
 
 #### Practical 1 ####
 file(GLOB_RECURSE SOURCES practical_1/*.cpp practical_1/*.h)
@@ -58,6 +64,12 @@ add_executable(4_PACMAN ${SOURCES})
 target_include_directories(4_PACMAN PRIVATE ${SFML_INCS})
 target_link_libraries(4_PACMAN lib_tile_level_loader lib_maths lib_ecm sfml-graphics)
 
+#### Physics ####
+file(GLOB_RECURSE SOURCES 5_physics/*.cpp 5_physics/*.h)
+add_executable(5_PHYSICS ${SOURCES})
+target_include_directories(5_PHYSICS PRIVATE ${SFML_INCS} ${B2D_INCS})
+target_link_libraries(5_PHYSICS Box2D lib_tile_level_loader lib_maths lib_ecm sfml-graphics)
+
 #### Link Dependencies ####
 foreach (exe ${EXECUTABLES})
   #Set working directory to build dir in visual studio
@@ -81,6 +93,7 @@ foreach (exe ${EXECUTABLES})
 add_dependencies(2_INVADERS copy_resources)
 add_dependencies(3_tilemap copy_resources)
 add_dependencies(4_pacman copy_resources)
+add_dependencies(5_physics copy_resources)
 endforeach ()
 
 add_custom_target(copy_resources ALL COMMAND ${CMAKE_COMMAND} 
