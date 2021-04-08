@@ -27,6 +27,11 @@ add_library(lib_tile_level_loader STATIC ${SOURCE_FILES})
 target_include_directories(lib_tile_level_loader INTERFACE "${CMAKE_SOURCE_DIR}/lib_tile_level_loader/" )
 target_link_libraries(lib_tile_level_loader sfml-graphics)
 
+## Entity Component System
+file(GLOB_RECURSE SOURCE_FILES lib_ecm/*.cpp lib_ecm/*.h)
+add_library(lib_ecm STATIC ${SOURCE_FILES})
+target_include_directories(lib_ecm INTERFACE "${CMAKE_SOURCE_DIR}/lib_ecm" )
+target_link_libraries(lib_ecm PRIVATE lib_maths)
 
 
 #### Practical 1 ####
@@ -47,7 +52,11 @@ add_executable(3_TILEMAP ${SOURCES})
 target_include_directories(3_TILEMAP PRIVATE ${SFML_INCS})
 target_link_libraries(3_TILEMAP lib_tile_level_loader lib_maths sfml-graphics)
 
-
+#### Pacman ####
+file(GLOB_RECURSE SOURCES 4_pacman/*.cpp 4_pacman/*.h)
+add_executable(4_PACMAN ${SOURCES})
+target_include_directories(4_PACMAN PRIVATE ${SFML_INCS})
+target_link_libraries(4_PACMAN lib_tile_level_loader lib_maths lib_ecm sfml-graphics)
 
 #### Link Dependencies ####
 foreach (exe ${EXECUTABLES})
@@ -71,6 +80,7 @@ foreach (exe ${EXECUTABLES})
   add_dependencies(${exe} sfml-graphics sfml-audio copy_resources)
 add_dependencies(2_INVADERS copy_resources)
 add_dependencies(3_tilemap copy_resources)
+add_dependencies(4_pacman copy_resources)
 endforeach ()
 
 add_custom_target(copy_resources ALL COMMAND ${CMAKE_COMMAND} 
