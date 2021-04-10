@@ -51,17 +51,33 @@ file(GLOB_RECURSE SOURCES 6_platformer/*.cpp 6_platformer/*.h)
 file(GLOB_RECURSE CMPNTS 6_platformer/components/*.cpp 6_platformer/components/*.h)
 file(GLOB_RECURSE SCENES 6_platformer/scenes/*.cpp 6_platformer/scenes/*.h)
 add_executable(6_PLATFORMER ${SOURCES} ${RESOURCE_FILES})
-source_group("scenes" FILES ${SCENES})
 source_group("components" FILES ${CMPNTS})
 source_group("resources" FILES ${RESOURCE_FILES})
 target_include_directories(6_PLATFORMER SYSTEM PRIVATE ${SFML_INCS} ${B2D_INCS})
 target_link_libraries(6_PLATFORMER lib_engine lib_maths lib_ecm lib_tile_level_loader Box2D sfml-graphics)
 set(EXECUTABLES ${EXECUTABLES} 6_PLATFORMER)
 
+## 7 - Pathfinding
+file(GLOB_RECURSE SOURCES 7_pathfinding/*.cpp 7_pathfinding/*.h)
+file(GLOB_RECURSE CMPNTS 7_pathfinding/components/*.cpp 7_pathfinding/components/*.h)
+file(GLOB_RECURSE SCENES 7_pathfinding/scenes/*.cpp 7_pathfinding/scenes/*.h)
+add_executable(7_PATHFINDING ${SOURCES} ${RESOURCE_FILES})
+source_group("components" FILES ${CMPNTS})
+source_group("resources" FILES ${RESOURCE_FILES})
+target_include_directories(7_PATHFINDING SYSTEM PRIVATE ${SFML_INCS} ${B2D_INCS})
+target_link_libraries(7_PATHFINDING lib_engine lib_maths lib_ecm lib_tile_level_loader Box2D sfml-graphics)
+set(EXECUTABLES ${EXECUTABLES} 7_PATHFINDING)
+
+
 set_target_properties(6_PLATFORMER 
     PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY
     ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)
 )
+set_target_properties(7_PATHFINDING
+    PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY
+    ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)
+)
+
 
 #### Link Dependencies ####
 foreach (exe ${EXECUTABLES})
