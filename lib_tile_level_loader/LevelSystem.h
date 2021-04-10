@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include <C:/Users/Zach/OneDrive/Documents/GitHub/lab1/lib_maths/maths.h>
+#include <maths.h>
 #include <memory>
 #include <string>
 #include <vector>
@@ -48,8 +48,6 @@ public:
   static const sf::Vector2f& getOffset();
 
   static float getTileSize();
-
-  static bool validmove(sf::Vector2f pos);
 
 protected:
   static std::unique_ptr<Tile[]> _tiles;

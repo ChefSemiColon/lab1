@@ -1,12 +1,11 @@
 #include "LevelSystem.h"
 #include <fstream>
-#include "../4_pacman/system_renderer.h"
 
 using namespace std;
 using namespace sf;
 
 std::map<LevelSystem::Tile, sf::Color> LevelSystem::_colours{
-    {WALL, Color::Blue}, {END, Color::Red}};
+    {WALL, Color::White}, {END, Color::Red}};
 
 sf::Color LevelSystem::getColor(LevelSystem::Tile t) {
   auto it = _colours.find(t);
@@ -25,8 +24,8 @@ size_t LevelSystem::_width;
 size_t LevelSystem::_height;
 
 float LevelSystem::_tileSize(100.f);
-//Vector2f LevelSystem::_offset(0.f, 20.f);
- Vector2f LevelSystem::_offset(0,0);
+Vector2f LevelSystem::_offset(0.0f, 30.0f);
+// Vector2f LevelSystem::_offset(0,0);
 vector<std::unique_ptr<sf::RectangleShape>> LevelSystem::_sprites;
 
 void LevelSystem::loadLevelFile(const std::string& path, float tileSize) {
@@ -174,13 +173,14 @@ void LevelSystem::buildSprites(bool optimise) {
 
 void LevelSystem::render(RenderWindow& window) {
   for (auto& t : _sprites) {
-      Renderer::queue(t.get());
+    window.draw(*t);
   }
 }
 
 LevelSystem::Tile LevelSystem::getTile(sf::Vector2ul p) {
   if (p.x > _width || p.y > _height) {
-    throw string("Tile out of range: ") + to_string(p.x) + "," + to_string(p.y) + ")";
+    throw string("Tile out of range: ") + to_string(p.x) + "," +
+        to_string(p.y) + ")";
   }
   return _tiles[(p.y * _width) + p.x];
 }
@@ -241,7 +241,3 @@ void LevelSystem::unload() {
 const Vector2f& LevelSystem::getOffset() { return _offset; }
 
 float LevelSystem::getTileSize() { return _tileSize; }
-
-bool LevelSystem::validmove(Vector2f pos) {
-    return (ls::getTileAt(pos) != ls::WALL);
-}
