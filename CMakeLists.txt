@@ -46,6 +46,12 @@ add_library(lib_engine STATIC ${SOURCE_FILES} ${RESOURCE_FILES})
 target_include_directories(lib_engine INTERFACE "${CMAKE_SOURCE_DIR}/engine/" PUBLIC SYSTEM ${B2D_INCS} )
 target_link_libraries(lib_engine lib_tile_level_loader lib_maths lib_ecm Box2D sfml-graphics sfml-audio)
 
+#### Practical 4 ####
+file(GLOB_RECURSE SOURCES 4_pacman/*.cpp 4_pacman/*.h)
+add_executable(4_PACMAN ${SOURCES})
+target_include_directories(4_PACMAN PRIVATE ${SFML_INCS})
+target_link_libraries(4_PACMAN lib_tile_level_loader lib_maths lib_ecm sfml-graphics)
+
 ## 6 - Platformer
 file(GLOB_RECURSE SOURCES 6_platformer/*.cpp 6_platformer/*.h)
 file(GLOB_RECURSE CMPNTS 6_platformer/components/*.cpp 6_platformer/components/*.h)
@@ -58,6 +64,18 @@ target_link_libraries(6_PLATFORMER lib_engine lib_maths lib_ecm lib_tile_level_l
 set(EXECUTABLES ${EXECUTABLES} 6_PLATFORMER)
 
 ## 7 - Pathfinding
+file(GLOB_RECURSE SOURCES 8_states/*.cpp 8_states/*.h)
+file(GLOB_RECURSE CMPNTS 8_states/components/*.cpp 8_states/components/*.h)
+file(GLOB_RECURSE SCENES 8_states/scenes/*.cpp 8_states/scenes/*.h)
+add_executable(8_STATES ${SOURCES} ${RESOURCE_FILES})
+source_group("components" FILES ${CMPNTS})
+source_group("resources" FILES ${RESOURCE_FILES})
+target_include_directories(8_STATES SYSTEM PRIVATE ${SFML_INCS} ${B2D_INCS})
+target_link_libraries(8_STATES lib_engine lib_maths lib_ecm lib_tile_level_loader Box2D sfml-graphics)
+set(EXECUTABLES ${EXECUTABLES} 8_STATES)
+
+
+## 7 - Pathfinding
 file(GLOB_RECURSE SOURCES 7_pathfinding/*.cpp 7_pathfinding/*.h)
 file(GLOB_RECURSE CMPNTS 7_pathfinding/components/*.cpp 7_pathfinding/components/*.h)
 file(GLOB_RECURSE SCENES 7_pathfinding/scenes/*.cpp 7_pathfinding/scenes/*.h)
@@ -68,7 +86,6 @@ target_include_directories(7_PATHFINDING SYSTEM PRIVATE ${SFML_INCS} ${B2D_INCS}
 target_link_libraries(7_PATHFINDING lib_engine lib_maths lib_ecm lib_tile_level_loader Box2D sfml-graphics)
 set(EXECUTABLES ${EXECUTABLES} 7_PATHFINDING)
 
-
 set_target_properties(6_PLATFORMER 
     PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY
     ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)
@@ -78,6 +95,10 @@ set_target_properties(7_PATHFINDING
     ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)
 )
 
+set_target_properties(8_STATES
+    PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY
+    ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)
+)
 
 #### Link Dependencies ####
 foreach (exe ${EXECUTABLES})
